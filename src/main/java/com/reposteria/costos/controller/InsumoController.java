@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/insumos") // La URL base será http://localhost:8080/api/insumos
-@CrossOrigin(origins = "http://localhost:5173") // Permite peticiones desde React
+@CrossOrigin(origins = "*") // Permite peticiones desde React
 public class InsumoController {
 
     @Autowired
