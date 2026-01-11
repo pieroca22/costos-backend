@@ -34,9 +34,12 @@ public class InsumoController {
         if (insumoExistente != null) {
             insumoExistente.setNombre(insumo.getNombre());
             insumoExistente.setPrecioPorKg(insumo.getPrecioPorKg());
+            // Agregamos esto:
+            insumoExistente.setTipoUnidad(insumo.getTipoUnidad());
+
             return service.guardar(insumoExistente);
         }
-        return null; // O podría retornar un error 404
+        return null;
     }
 
     // DELETE: Borrar un insumo
@@ -44,4 +47,5 @@ public class InsumoController {
     public void eliminar(@PathVariable Long id) {
         service.eliminar(id);
     }
+
 }
